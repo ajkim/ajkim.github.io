@@ -4,11 +4,12 @@
 }
 
 ul{
+	color: #eb6864;
 	float:right;
 }
 
 .container ul li a:hover{
-	color:lightgrey;
+	color:purple;
 	font-style:bold;
 }
 
@@ -70,7 +71,7 @@ ul{
 }
 
 .row img:hover{
-	background-color: lightgrey;
+	background-color: yellow;
 	height:20em;
 	width:20em;
 }

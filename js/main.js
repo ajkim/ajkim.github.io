@@ -65,7 +65,7 @@ Resume = Backbone.View.extend({
 
 var PortfolioRouter = Backbone.Router.extend({
 	routes:{
-		"" : "homePage",
+		"" : "home",
 		"home" : "home",
 		"about" : "about", 
 		"projects" : "projects",
