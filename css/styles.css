@@ -1,0 +1,82 @@
+.jumbotron{
+
+	width:940px;
+}
+
+ul{
+	float:right;
+}
+
+.container ul li a:hover{
+	color:lightgrey;
+	font-style:bold;
+}
+
+#img{
+	background: url("../public/images/face.jpg");
+  border-radius: 10em;
+}
+
+#title{
+	font-family: "News Cycle", "Arial Narrow Bold", sans-serif;
+	color: darkblue;
+}
+
+.aboutme{
+	font-family: "News Cycle", "Arial Narrow Bold", sans-serif;
+	font-size: 18px;
+	color: blue;
+	font-style: italic;
+}
+
+.resume{
+	text-align: center;
+	position: relative;
+	font-style: bold;
+	color: black;
+}
+
+.left{
+	float:right;
+}
+
+.fml{
+	height: 20em;
+	width: 20em;
+	background: url("../public/images/FML.png");
+	border: 1px blue dashed;
+}
+
+.atlas{
+	height: 20em;
+	width: 20em;
+	background: url("../public/images/atlas.png");
+	border: 1px lightgrey dashed;
+}
+
+.memzeez{
+	height: 20em;
+	width: 20em;
+	background: url("../public/images/memzeez.jpg");
+	border: 1px blue dashed;
+}
+
+.row img{
+	margin-left: 1em;
+	border: 1px lightgrey solid;
+	padding: 1em;
+	height:20em;
+	width:20em;
+}
+
+.row img:hover{
+	background-color: lightgrey;
+	height:20em;
+	width:20em;
+}
+
+.panel{
+	width:800px;
+}
+
+

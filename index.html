@@ -3,92 +3,192 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Ann's Page</title>
-		<link href="css/bootstrap.min.css" rel="stylesheet">
-		<link href="stylesheets/styles.css" rel="stylesheet">
-		<div class="navbar-collapse collapse navbar-inverse-collapse">
-                  <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">Active</a></li>
-                    <li><a href="#">Link</a></li>
-                    <li class="dropdown">
-                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-                      <ul class="dropdown-menu">
-                        <li><a href="#">Action</a></li>
-                        <li><a href="#">Another action</a></li>
-                        <li><a href="#">Something else here</a></li>
-                        <li class="divider"></li>
-                        <li class="dropdown-header">Dropdown header</li>
-                        <li><a href="#">Separated link</a></li>
-                        <li><a href="#">One more separated link</a></li>
-                      </ul>
-                    </li>
-                  </ul>
-                  <form class="navbar-form navbar-left">
-                    <input type="text" class="form-control col-lg-8" placeholder="Search">
-                  </form>
-                  <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#">Link</a></li>
-                    <li class="dropdown">
-                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-                      <ul class="dropdown-menu">
-                        <li><a href="#">Action</a></li>
-                        <li><a href="#">Another action</a></li>
-                        <li><a href="#">Something else here</a></li>
-                        <li class="divider"></li>
-                        <li><a href="#">Separated link</a></li>
-                      </ul>
-                    </li>
-                  </ul>
-                </div>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">		
 
-	
 </head>
 <body>
-	<div class="container">
-		<br>
-		<br>
+	<div class="container" id="container"></div>
 
-<div class="jumbotron">
-	<h1 id="title">Ann Kim</h1>
-	<h3 class="aboutme">Aspiring Web Developer based in NYC.  Inspired by the transcience and rawness of life.</h3>
-</div>
+  <script type="text/javascript" id="home_template">
+    <div class="container" id="home"><br>
+          <div class="jumbotron">
+              <h1 id="title">Ann Kim</h1>
+              <h3 class="aboutme">Aspiring Web Developer based in NYC.  Inspired by the transcience and rawness of life.</h3>
+          </div>
+
+      <ul>
+            <li>
+              <a href="#about" id="about-link">About Ann</a>
+            </li>
+            <li>
+              <a href="#projects" id="projects-link">PROJECTS</a>
+            </li>
+            <li>
+              <a href="https://linkedin.com/in/ajkim84" id="linkedin-link">Connect on LinkedIN</a>
+            </li>
+            <li>
+              <a href="https://github.com/ajkim" id="github">GITHUB</a>
+            </li>
+            <li>
+              <a href="#resume" id="resume">RESUME</a>
+            </li>
+      </ul>
+
+        <div class="row">
+          <a href="http://github.com/ajkim"><img src="public/images/face.jpg" class="img-rounded" alt="Responsive image"></a>
+          <a href="http://prettytemper.tumblr.com"><img src="public/images/blog.jpg" class="img-rounded" alt="Responsive image"></a>
+          <img src="public/images/fu.jpg" class="img-rounded" alt="Responsive image">
+        </div>
+          <div class="details"></div>
+        <div class="row">
+          <a href="http://feelmylyrics.herokuapp.com" ><img src="public/images/fml.png" class="img-rounded" alt="Responsive image"></a>
+          <a href="http://watch-atlas.herokuapp.com"><img src="public/images/atlas.png" class="img-rounded" alt="Responsive image"></a>
+          <a href="http://memories-app.herokuapp.com"><img src="public/images/memzeez.png" class="img-rounded" alt="Responsive image"></a>
+        </div>
+          <div class="details"></div>
+  </div>
+  </script>
+
+
+ <script type="text/javascript" id="about_template">
+    <div class="container" id="about">
+          <div class="jumbotron">
+              <h1 id="title">Ann Kim</h1>
+              <h3 class="aboutme">Aspiring Web Developer based in NYC.  Inspired by the transcience and rawness of life.</h3>
+          </div>
+
+      <ul>
+            <li>
+              <a href="#home" id="home-link">Home</a>
+            </li>
+            <li>
+              <a href="#projects" id="projects-link">PROJECTS</a>
+            </li>
+            <li>
+              <a href="https://linkedin.com/in/ajkim84" id="linkedin-link">Connect on LinkedIN</a>
+            </li>
+            <li>
+              <a href="https://github.com/ajkim" id="github">GITHUB</a>
+            </li>
+            <li>
+              <a href="#resume" id="resume">RESUME</a>
+            </li>
+      </ul>
+    </div>
+</script>
+
+ <script type="text/javascript" id="projects_template">
+ <div class="container" id="projects">
+    <br><br>
+       <ul>
+            <li>
+              <a href="#about" id="about-link">About Ann</a>
+            </li>
+            <li>
+              <a href="#projects" id="projects-link">PROJECTS</a>
+            </li>
+            <li>
+              <a href="https://linkedin.com/in/ajkim84" id="linkedin-link">Connect on LinkedIN</a>
+            </li>
+            <li>
+              <a href="https://github.com/ajkim" id="github">GITHUB</a>
+            </li>
+            <li>
+              <a href="#resume" id="resume">RESUME</a>
+            </li>
+      </ul><br><br>
+
+  <div class="row">
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h3 class="panel-title">Lyrical Generator</h3>
+      </div>
+      <div class="panel-body">
+        <h2><a href="http://feelmylyrics.herokuapp.com" >Feel My Lyrics</a></h2>
+        <div class="fml"></div>
+        <ul class="left">
+          <li>MusixMatch Gem to generate snippet</li>
+          <li>Use of PostgreSQL database</li>
+          <li>User, Post, Comment models and associations</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel panel-success">
+    <div class="panel-heading">
+      <h3 class="panel-title">Browse YouTube Trends by Country</h3>
+    </div>
+    <div class="panel-body">
+      <h2><a href="http://watch-atlas.herokuapp.com">Atlas</a></h2>
+      <div class="atlas">
+        <ul class="left">
+          <li>MusixMatch Gem to generate snippet</li>
+          <li>Use of PostgreSQL database</li>
+          <li>User, Post, Comment models and associations</li>
+        </ul>
+        </div>
+    </div>
+  </div>
+
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h3 class="panel-title">Celebrate Friends and Memories</h3>
+    </div>
+    <div class="panel-body">
+      <h2><a href="http://memories-app.herokuapp.com">MemZeez</a></h2>
+      <div class="memzeez">
+        <ul class="left">
+          <li>MusixMatch Gem to generate snippet</li>
+          <li>Use of PostgreSQL database</li>
+          <li>User, Post, Comment models and associations</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  </div>
+</script>
+
+<script type="text/javascript" id="resume_template">
+ <div class="container" id="resume">
+    <br><br>
+       <ul>
+            <li>
+              <a href="#about" id="about-link">About Ann</a>
+            </li>
+            <li>
+              <a href="#projects" id="projects-link">PROJECTS</a>
+            </li>
+            <li>
+              <a href="https://linkedin.com/in/ajkim84" id="linkedin-link">Connect on LinkedIN</a>
+            </li>
+            <li>
+              <a href="https://github.com/ajkim" id="github">GITHUB</a>
+            </li>
+          
+      </ul><br><br>
+
+  <iframe src="https://docs.google.com/file/d/0B3qk0we6HOqTRGZ6T25ONjRydWc/preview?pli=1" width="640" height="480">
+  </iframe>
+
+        <h2>
+          <a href="http://bit.ly/MzKN6u" id="resume">
+            Click to Download as PDF
+          </a>
+        </h2>
+   
+    </div>
+</script>
 
 
 
+ <script src="js/jquery-2.1.0.min.js"></script>
+ <script src="js/underscore.js"></script>
+ <script src="js/backbone.js"></script>
 
-<br>
-<br>
-
-	<div class="panel panel-primary">
-              <div class="panel-heading">
-                <h3 class="panel-title">PROJECT ONE</h3>
-              </div>
-              <div class="panel-body">
-                <h2><a href="http://feelmylyrics.herokuapp.com" >Feel My Lyrics</a></h2>
-                <div class="fml"></div>
-              </div>
-            </div>
-
-            <div class="panel panel-success">
-              <div class="panel-heading">
-                <h3 class="panel-title">PROJECT TWO</h3>
-              </div>
-              <div class="panel-body">
-                <h2><a href="http://watch-atlas.herokuapp.com">Atlas</a></h2>
-                <div class="atlas"></div>
-              </div>
-            </div>
-
-	
-</div>
-
-<div>
-	<h2 class="resume"><a href="http://bit.ly/MzKN6u">View Resume Here</a></h2>
-</div>
-<br>
-<br>
-<br>
-
+ <script src="js/main.js"></script>
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-	<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 </body>
 </html>
