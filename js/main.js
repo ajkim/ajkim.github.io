@@ -62,6 +62,34 @@ Resume = Backbone.View.extend({
 	}
 });
 
+Contact = Backbone.View.extend({
+	el : $('#container'),
+
+	initialize: function(){
+		console.log("resume view");
+		this.render();
+	},
+
+	render: function(){
+		var fifth_template = _.template($('#contact_template').html(), {});
+		this.$el.html(fifth_template);
+	}
+});
+
+Skills = Backbone.View.extend({
+	el : $('#container'),
+
+	initialize: function(){
+		console.log("resume view");
+		this.render();
+	},
+
+	render: function(){
+		var sixth_template = _.template($('#skills_template').html(), {});
+		this.$el.html(sixth_template);
+	}
+});
+
 
 var PortfolioRouter = Backbone.Router.extend({
 	routes:{
@@ -69,7 +97,9 @@ var PortfolioRouter = Backbone.Router.extend({
 		"home" : "home",
 		"about" : "about", 
 		"projects" : "projects",
-		"resume" : "resume"
+		"resume" : "resume",
+		"contact" : "contact",
+		"skills" : "skills"
 	},
 
 	home: function(){
@@ -87,6 +117,14 @@ var PortfolioRouter = Backbone.Router.extend({
 	resume: function(){
 		console.log("Resume");
 		new Resume();
+	},
+	contact: function(){
+		console.log("Contact");
+		new Contact();
+	},
+	skills: function(){
+		console.log("Skills");
+		new Skills();
 	}
 
 });
@@ -98,6 +136,43 @@ $(function(){
 	console.log("doc ready");
 
 	var display = new Home();
+
+	var Gallery = {
+		Elements: {
+
+			items: $('div.item', '#portfolio'),
+			details: $('#portfolio-details', '#portfolio')
+
+		},
+
+		suck: {
+			it: function(){
+				Gallery.Elements.items.each(function(){
+					var $item = $(this);
+					var $row = $item.parent();
+					var $details = $row.next('div.details');
+					var $li = $('li', Gallery.Elements.details);
+
+					$item.click(function(event) {
+						event.preventDefault();
+						$('div.details').hide();
+						$details.empty();
+						var $html = $li.eq($item.data('rel')).html();
+						$details.html($html).slideDown(600);
+						$('html, body').animate({
+							scrollTop: 0
+						}, 0).animate({
+							scrollTop: $details.offset().top
+						}, 300);
+
+					});
+				});
+
+			}
+		}
+	};
+
+Gallery.suck.it();
 });
 
 
