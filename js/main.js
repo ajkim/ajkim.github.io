@@ -153,8 +153,8 @@ $(function(){
 					var $details = $row.next('div.details');
 					var $li = $('li', Gallery.Elements.details);
 
-					$item.click(function(event) {
-						event.preventDefault();
+					$item.click(function() {
+	
 						$('div.details').hide();
 						$details.empty();
 						var $html = $li.eq($item.data('rel')).html();
