@@ -8,13 +8,39 @@ Home = Backbone.View.extend({
 
 	initialize: function(){
 		console.log("home view");
+		this.instagram();
 		this.render();
+	},
+
+	instagram: function(){
+		$.ajax({
+	  url: 'https://api.instagram.com/v1/users/self/media/recent/?access_token=3819378.cf36be6.700a70df191e49f6b263ecee48de664f',
+	  data: {
+	    format: 'json'
+	  },
+	  error: function() {
+	    $('#info').html('<p>An error has occurred</p>');
+	  },
+	  dataType: 'jsonp',
+	  success: function(data) {
+	  	_.each(data.data, function (obj) {
+	  		var imageUrl = obj.images.thumbnail.url;
+	  		var link = obj.link;
+
+	  		var $img = $('<img src='+imageUrl+' width=40 height=40>');
+		    $('.photos')
+		      .append($img);
+		    });
+	  	},
+		  type: 'GET'
+		});
 	},
 
 	render: function(){
 		var first_template = _.template($('#home_template').html(), {});
 		this.$el.html(first_template);
 	}
+
 
 });
 
@@ -95,7 +121,7 @@ var PortfolioRouter = Backbone.Router.extend({
 	routes:{
 		"" : "home",
 		"home" : "home",
-		"about" : "about", 
+		"about" : "about",
 		"projects" : "projects",
 		"resume" : "resume",
 		"contact" : "contact",
@@ -105,11 +131,11 @@ var PortfolioRouter = Backbone.Router.extend({
 	home: function(){
 		console.log("Home");
 		new Home();
-	}, 
+	},
 	about: function(){
 		console.log("About");
 		new About();
-	}, 
+	},
 	projects: function(){
 		console.log("Projects");
 		new Projects();
@@ -154,7 +180,7 @@ $(function(){
 					var $li = $('li', Gallery.Elements.details);
 
 					$item.click(function() {
-	
+
 						$('div.details').hide();
 						$details.empty();
 						var $html = $li.eq($item.data('rel')).html();
