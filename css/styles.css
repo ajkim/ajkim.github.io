@@ -23,6 +23,15 @@
 	z-index: 1;
 	height: 50px;
 	min-height: 20px;
+	font-size: 14px;
+}
+
+.navbar-nav {
+	padding-right: 64px;
+}
+
+a.navbar-brand {
+	margin-left: 10px;
 }
 
 .navbar-brand{
@@ -59,7 +68,6 @@
 	font-family: "News Cycle", "Arial Narrow Bold", sans-serif;
 	font-size: 18px;
 	color: blue;
-	font-style: italic;
 }
 
 .resume{
@@ -111,8 +119,18 @@
 	text-align: top;
 	float:left;
 	height:20em;
-	width:40em;
-	margin-left:2em;
+	width:34em;
+	margin-left:5em;
+}
+
+.me p span {
+	color: #252537;
+	padding-left: 5px;
+}
+
+.me #email {
+	color: #252537;
+	padding-left: 10px;
 }
 
 .intro p{
@@ -268,7 +286,7 @@
 
 .container #projects .row .item > .fa-ul li i{
 	color:grey;
-} 
+}
 
 .container #about{
 	line-height: 2;

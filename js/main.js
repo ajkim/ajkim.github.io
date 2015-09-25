@@ -23,6 +23,7 @@ Home = Backbone.View.extend({
 	  },
 	  dataType: 'jsonp',
 	  success: function(data) {
+
 	  	_.each(data.data, function (obj) {
 	  		var imageUrl = obj.images.thumbnail.url;
 	  		var link = obj.link;
